@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "iostream": "cpp"
+    },
+    "livePreview.defaultPreviewPath": "/DESAIN WEB/WEEK2/biodata.html"
+}
