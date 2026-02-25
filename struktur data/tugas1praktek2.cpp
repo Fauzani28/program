@@ -60,10 +60,6 @@ int ex5(vector<int> A, vector<int> B) {
 }
 
 int main() {
-    cout << "==================================================" << endl;
-    cout << "     TUGAS 01 PRAKTIK STRUKTUR DATA 2026" << endl;
-    cout << "==================================================" << endl;
-    
     cout << "\n--- DATA ARRAY BUATAN SENDIRI (10 ELEMEN) ---" << endl;
     
     vector<int> A1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
