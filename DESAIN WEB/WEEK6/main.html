@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="icon" href="1675955150554.ico">
+    <title>Website Saya - Biodata</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .menu {
+            background-color: #2980b9;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #818181;
+            color: #fdfeff;
+            border: none;
+            padding: 12px 30px;
+            margin: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .bio-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: rgba(27, 27, 27, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bio-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-size: 2em;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .bio-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(135deg, #00f7ff 0%, #8000ff 100%);
+        }
+        
+        .profile-header {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+        
+        .profile-info {
+            flex: 1;
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: none;
+        }
+        
+        .info-row {
+            display: flex;
+            margin-bottom: 12px;
+            padding: 5px 0;
+        }
+        
+        .info-label {
+            width: 150px;
+            font-weight: bold;
+            color: #037cf5;
+        }
+        
+        .info-value {
+            flex: 1;
+            margin-left: 20px;
+            color: #ffffff;
+        }
+        
+        .section {
+            margin-top: 30px;
+            padding-top: 20px;
+        }
+        
+        .section-title {
+            color: #007ffd;
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .list-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .list-box {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .list-box ul, .list-box ol {
+            margin: 0;
+            padding-left: 20px;
+            color: #ffffff;
+        }
+        
+        .list-box li {
+            margin-bottom: 8px;
+        }
+        
+        .social-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .social-links li {
+            margin-bottom: 10px;
+        }
+        
+        .social-links a {
+            color: rgb(0, 1, 73);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 10px;
+            background-color: #cccccc;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #d5d9ff;
+            transform: translateX(5px);
+        }
+        
+        .social-links img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .info-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .info-label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+            
+            .info-value {
+                margin-left: 0;
+            }
+            
+            .list-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .menu input[type="submit"] {
+                display: block;
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="header">
+            <h1 align="center">SELAMAT DATANG</h1>
+            <h1 align="center">DI WEB SAYA</h1>
+        </div>
+        
+        <div class="menu">
+            <form style="display: inline;">
+                <input type="submit" value="HOME" formaction="home.html">
+                <input type="submit" value="BIODATA" formaction="main.html">
+                <input type="submit" value="GALERI" formaction="galeri.html">
+                <input type="submit" value="DAFTAR" formaction="latihann.html">
+            </form>
+        </div>
+    </div>
+
+    <div class="bio-container">
+        <h2 class="bio-title">BIODATA</h2>
+
+        <div class="profile-header">
+            <div class="profile-info">
+                <div class="info-row">
+                    <div class="info-label">Nama</div>
+                    <div class="info-value">M Fachri Fauzani</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">NIM</div>
+                    <div class="info-value">2505181034</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Kelas</div>
+                    <div class="info-value">TRPL 2D</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Alamat</div>
+                    <div class="info-value">Jl. SD Inpres No. 34 Medan Polonia</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Tempat, Tgl Lahir</div>
+                    <div class="info-value">Medan, 28 Juni 2007</div>
+                </div>
+            </div>
+            <img src="WhatsApp Image 2026-02-12 at 7.57.29 PM.jpeg" alt="Pasfoto" class="profile-photo">
+        </div>
+
+        <div class="section">
+            <div class="list-container">
+                <div class="list-box">
+                    <h3 style="color: #17508a; margin-bottom: 10px;"> Makanan Favorit:</h3>
+                    <ul>
+                        <li>Nasi Goreng</li>
+                        <li>Ayam Geprek</li>
+                        <li>Mie Goreng</li>
+                        <li>Mie Ayam</li>
+                    </ul>
+                </div>
+                <div class="list-box">
+                    <h3 style="color: #17508a; margin-bottom: 10px;"> Hobi:</h3>
+                    <ol type="a">
+                        <li>Lari</li>
+                        <li>Bermain Game</li>
+                        <li>Renang</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Media Sosial</div>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="ai-generated-instagram-logo-free-png.png" alt="Instagram"> Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/en/" target="_blank">
+                        <img src="images (1).png" alt="Tiktok"> TikTok
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

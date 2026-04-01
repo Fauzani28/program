@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="blue" size="3" color="black">
+
+    <h1 align="center">WEBSITE FACHRI</h1>
+    <p align="center"><b>Silahkan isi form ini</b></p>
+
+
+   <table border="0" bgcolor="blue" width="600" align="center">
+
+    <tr>
+       <td>Nama</td>
+       <td>:</td>
+       <td><input type="text" name="nama" placeholder="Nama"></td>
+    </tr>
+    <tr>
+       <td>Alamat</td>
+       <td>:</td>
+       <td><input type="text" name="alamat" placeholder="Alamat"></td>
+    </tr>
+    <tr>
+       <td>Email</td>
+       <td>:</td>
+       <td><input type="email" name="email" placeholder="Email"></td>
+    </tr>
+    <tr>
+       <td>Password</td>
+       <td>:</td>
+       <td><input type="password" name="password" placeholder="Password"></td>
+    </tr>
+    <tr>
+        <td>Tempat dan Tanggal Lahir</td>
+        <td>:</td>
+        <td><input type="text" name="tempat_lahir" placeholder="Tempat Lahir"></td>
+        <td><input type="date" name="tanggal_lahir"></td>
+    </tr>
+    <tr>
+         <td>Prodi</td>
+         <td>:</td>
+         <td>
+              <select name="prodi">
+                <option value="D4">Komputer dan Informatika</option>
+                <option value="D4">Akuntansi</option>
+                <option value="D3">Teknik Sipil</option>
+                <option value="D3">Teknik Mesin</option>
+              </select>
+            </td>
+        </tr>
+        <tr></tr>
+        <td>Jurusan</td>
+        <td>:</td>
+        <td>
+           <select name="jurusan">
+               <option value="Teknik Informatika">Teknik Rekayasa Perangkat Lunak</option>
+               <option value="Sistem Informasi">Teknik Komputer</option>
+               <option value="Manajemen Informatika">Teknik Rekayasa Multimedia dan Grafis</option>
+               <option value="Manajemen Informatika">Teknik Mesin</option>
+           </select>
+       </td>
+    </tr>
+    <tr>
+       <td>Jenis Kelamin</td>
+       <td>:</td>
+       <td>
+           <input type="radio" name="Gender" value="Laki laki"> Laki-laki
+           <input type="radio" name="Gender" value="Perempuan"> Perempuan
+         </td>
+    </tr>
+    <tr>
+        <td>Bahasa pemrograman yang dikuasai</td>
+        <td>:</td>
+        <td>
+            <input type="checkbox" name="bahasa[]" value="Python"> Python
+            <input type="checkbox" name="bahasa[]" value="Java"> Java
+            <input type="checkbox" name="bahasa[]" value="C++"> C++
+        </td>
+    </tr>
+    <tr>
+        <td>Tulis Komentar</td>
+        <td>:</td>
+        <td><textarea name="komentar" width="300" height="100"></textarea></td>
+    </tr>
+    <tr>
+        <td colspan="4" style="text-align: center;">
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+        </td>
+    </tr>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Saya - Formulir Daftar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        h1 {
+            margin: 10px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .menu {
+            background-color: #2980b9;
+            padding: 15px;
+            border-radius: 0 0 10px 10px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            background-color: #818181;
+            color: #fdfeff;
+            border: none;
+            padding: 12px 30px;
+            margin: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .form-wrapper {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background: rgba(30, 30, 30, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #ffffff;
+            font-size: 2em;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .form-label {
+            width: 200px;
+            font-weight: bold;
+            color: #ffffff;
+            padding: 10px 0;
+        }
+
+        .form-input {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #4a4a4a;
+            color: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]::placeholder,
+        input[type="email"]::placeholder,
+        input[type="password"]::placeholder,
+        textarea::placeholder {
+            color: #cccccc;
+            opacity: 0.8;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #2980b9;
+            outline: none;
+            box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+            background-color: #5a5a5a;
+        }
+
+        select {
+            background-color: #4a4a4a;
+            color: #ffffff;
+            cursor: pointer;
+        }
+
+        select option {
+            background-color: #4a4a4a;
+            color: #ffffff;
+        }
+
+        .double-input {
+            display: flex;
+            gap: 10px;
+        }
+
+        .double-input input:first-child {
+            width: 48%;
+        }
+
+        .double-input input:last-child {
+            width: 48%;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: #2980b9;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .action-buttons input[type="submit"],
+        .action-buttons input[type="reset"] {
+            background-color: #2980b9;
+            padding: 12px 40px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: auto;
+            min-width: 120px;
+        }
+
+        .action-buttons input[type="reset"] {
+            background-color: #e74c3c;
+        }
+
+        .action-buttons input[type="submit"]:hover,
+        .action-buttons input[type="reset"]:hover {
+            background-color: #000000;
+            transform: scale(1.05);
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                margin: 20px auto;
+            }
+            
+            .menu input[type="submit"] {
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                margin: 10px auto;
+            }
+            
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .form-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .form-label {
+                width: 100%;
+                margin-bottom: 5px;
+                font-size: 1.1em;
+            }
+            
+            .form-input {
+                width: 100%;
+                min-width: 100%;
+            }
+            
+            .double-input {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .double-input input:first-child,
+            .double-input input:last-child {
+                width: 100%;
+            }
+            
+            .radio-group,
+            .checkbox-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                width: 100%;
+            }
+            
+            .radio-group label,
+            .checkbox-group label {
+                width: 100%;
+                padding: 8px 0;
+                border-bottom: 1px solid #4a4a4a;
+            }
+            
+            .radio-group label:last-child,
+            .checkbox-group label:last-child {
+                border-bottom: none;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            .action-buttons input[type="submit"],
+            .action-buttons input[type="reset"] {
+                width: 100%;
+                max-width: 100%;
+                padding: 15px 20px;
+                font-size: 18px;
+                margin: 0;
+            }
+            
+            .action-buttons input[type="submit"],
+            .action-buttons input[type="reset"] {
+                min-height: 55px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            }
+            
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            input[type="date"],
+            select,
+            textarea {
+                font-size: 16px;
+                padding: 14px;
+            }
+            
+            .form-wrapper {
+                padding: 20px 15px;
+                margin: 20px auto;
+            }
+            
+            .form-title {
+                font-size: 1.8em;
+                margin-bottom: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .form-wrapper {
+                padding: 15px 12px;
+            }
+            
+            .form-title {
+                font-size: 1.6em;
+            }
+            
+            .action-buttons input[type="submit"],
+            .action-buttons input[type="reset"] {
+                padding: 14px 20px;
+                font-size: 16px;
+            }
+            
+            .menu input[type="submit"] {
+                max-width: 200px;
+            }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .action-buttons input[type="submit"]:active,
+            .action-buttons input[type="reset"]:active {
+                transform: scale(0.98);
+                opacity: 0.9;
+            }
+            
+            input[type="submit"]:active {
+                transform: scale(0.98);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="header">
+            <h1 align="center">SELAMAT DATANG</h1>
+            <h1 align="center">DI WEB SAYA</h1>
+        </div>
+
+        <div class="menu">
+            <form style="display: inline;">
+                <input type="submit" value="HOME" formaction="home.html">
+                <input type="submit" value="BIODATA" formaction="main.html">
+                <input type="submit" value="GALERI" formaction="galeri.html">
+                <input type="submit" value="DAFTAR" formaction="latihann.html">
+            </form>
+        </div>
+    </div>
+
+    <div class="form-wrapper">
+        <h2 class="form-title">Formulir Pendaftaran</h2>
+
+        <form>
+            <div class="form-group">
+                <div class="form-label">Nama</div>
+                <div class="form-input">
+                    <input type="text" name="nama" placeholder="Masukkan nama lengkap">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Alamat</div>
+                <div class="form-input">
+                    <input type="text" name="alamat" placeholder="Masukkan alamat">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Email</div>
+                <div class="form-input">
+                    <input type="email" name="email" placeholder="contoh@email.com">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Password</div>
+                <div class="form-input">
+                    <input type="password" name="password" placeholder="Masukkan password">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Tempat dan Tanggal Lahir</div>
+                <div class="form-input">
+                    <div class="double-input">
+                        <input type="text" name="tempat_lahir" placeholder="Tempat Lahir">
+                        <input type="date" name="tanggal_lahir">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Jurusan</div>
+                <div class="form-input">
+                    <select name="jurusan">
+                        <option value="">-- Pilih Jurusan --</option>
+                        <option value="Teknik">Komputer dan Informatika</option>
+                        <option value="Teknik">Akuntansi</option>
+                        <option value="Teknik">Teknik Sipil</option>
+                        <option value="Teknik">Teknik Mesin</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Prodi</div>
+                <div class="form-input">
+                    <select name="prodi">
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="D4">Teknik Rekayasa Perangkat Lunak</option>
+                        <option value="D3">Teknik Komputer</option>
+                        <option value="D4">Teknik Rekayasa Multimedia dan Grafis</option>
+                        <option value="D3">Manajemen Informatika</option>
+                        <option value="D3">Teknik Mesin</option>
+                        <option value="D3">Teknik Sipil</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Jenis Kelamin</div>
+                <div class="form-input">
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="Gender" value="Laki laki"> Laki-laki
+                        </label>
+                        <label>
+                            <input type="radio" name="Gender" value="Perempuan"> Perempuan
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Bahasa pemrograman yang dikuasai</div>
+                <div class="form-input">
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="bahasa[]" value="Python"> Python
+                        </label>
+                        <label>
+                            <input type="checkbox" name="bahasa[]" value="Java"> Java
+                        </label>
+                        <label>
+                            <input type="checkbox" name="bahasa[]" value="C++"> C++
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Tulis Komentar</div>
+                <div class="form-input">
+                    <textarea name="komentar" placeholder="Tulis komentar Anda di sini..."></textarea>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="action-buttons">
+                <input type="submit" value="Save">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

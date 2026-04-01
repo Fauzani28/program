@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portal berita terkini Indonesia">
+<title>Portal Berita — Beranda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<header>
+<a href="/" class="logo">
+<img src="/logo.png" alt="Portal Berita Logo">
+</a>
+<nav aria-label="Navigasi Utama">
+<ul>
+<li><a href="/" aria-current="page">Beranda</a></li>
+<li><a href="/nasional">Nasional</a></li>
+<li><a href="/teknologi">Teknologi</a></li>
+<li><a href="/olahraga">Olahraga</a></li>
+</ul>
+</nav>
+<form role="search" action="/cari" method="get">
+<label for="q">Cari berita</label>
+<input id="q" type="search" name="q" placeholder="Ketik kata
+kunci...">
+<button type="submit">Cari</button>
+</form>
+</header>
+<!-- HERO: Berita utama -->
+<section aria-label="Berita Pilihan">
+<article>
+<figure>
+<img src="/hero.jpg" alt="Foto ilustrasi berita utama">
+<figcaption>Foto: Dokumentasi Kementerian Teknologi</figcaption>
+</figure>
+<header>
+<span>Teknologi</span>
+<h1>Indonesia Luncurkan Satelit Komunikasi Generasi Terbaru</h1>
+<p>Peluncuran berhasil dilakukan dari Kennedy Space Center...</p>
+</header>
+</article>
+</section>
+<!-- MAIN: Konten utama + Sidebar -->
+<main>
+<!-- Artikel utama -->
+<section aria-label="Berita Terbaru">
+<h2>Berita Terbaru</h2>
+<article>
+<header>
+<h3><a href="/berita/1">Ekonomi Digital RI Tumbuh 40%</a></h3>
+<address>Oleh <a href="/penulis/sari">Sari Dewi</a></address>
+<time datetime="2024-11-20">20 November 2024</time>
+</header>
+<p>Pertumbuhan ekonomi digital Indonesia...</p>
+</article>
+<article>
+<header>
+<h3><a href="/berita/2">Startup Lokal Raih Pendanaan Seri
+
+B</a></h3>
+
+<address>Oleh <a href="/penulis/andi">Andi Pratama</a></address>
+<time datetime="2024-11-19">19 November 2024</time>
+</header>
+<p>Startup fintech asal Bandung berhasil...</p>
+</article>
+</section>
+<!-- Sidebar -->
+<aside aria-label="Konten Tambahan">
+<section>
+<h2>Trending Hari Ini</h2>
+<ol>
+<li><a href="/berita/trending-1">Harga BBM Terbaru</a></li>
+<li><a href="/berita/trending-2">Hasil Pilkada 2024</a></li>
+<li><a href="/berita/trending-3">Piala Dunia U-20</a></li>
+</ol>
+</section>
+<section>
+<h2>Berlangganan Newsletter</h2>
+<form>
+<label for="email">Alamat Email</label>
+<input id="email" type="email" required>
+<button type="submit">Daftar</button>
+</form>
+</section>
+</aside>
+</main>
+<!-- FOOTER -->
+<footer>
+<section>
+<h3>Portal Berita Indonesia</h3>
+<p>Menyajikan berita akurat dan terpercaya sejak 2010.</p>
+</section>
+<nav aria-label="Footer">
+<a href="/tentang">Tentang Kami</a>
+<a href="/kontak">Kontak</a>
+<a href="/karir">Karir</a>
+</nav>
+<p><small>Copyright &copy; 2024 Portal Berita. All rights
+reserved.</small></p>
+</footer>
+</body>
+</html>

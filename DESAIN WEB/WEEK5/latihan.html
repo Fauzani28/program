@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form> 
+        Nama :
+        <input type="text" name="nama" placeholder="nama"><br><br>
+        Alamat :
+        <input type="text" name="alamat" placeholder="alamat"><br><br>
+        Email :
+        <input type="email" name="email" placeholder="email"><br><br>
+        Password :
+        <input type="text" name="katasandi" placeholder="password"><br><br>
+
+        Jenis Kelamin :
+        <input type="radio" name="gender" value="pria"> PRIA
+        <input type="radio" name="gender" value="wanita"> WANITA <br>
+
+        Bahasa Pemrograman yang dikuasai : <br>
+        <input type="checkbox" name="programming_languages" value="python"> Python <br>
+        <input type="checkbox" name="programming_languages" value="java"> Java <br>
+        <input type="checkbox" name="programming_languages" value="javascript"> JavaScript <br>
+        <input type="checkbox" name="programming_languages" value="c++"> C++ <br><br>
+
+        Komentar : <br>
+        <textarea name="komentar" rows="8" cols="50"></textarea><br>
+        <input type="submit" value="Kirim"><br><br>
+
+        Jurusan :
+        <select>
+            <option value=""selected> PILIH JURUSAN </option>
+            <option value="TI"> Teknik Mesin </option>
+            <option value="TI"> Teknik Informatika </option>
+            <option value="TS"> Teknik Sipil </option>
+        </select><br><br>
+
+        Program Studi :
+        <select name="program_studi">
+            <option value=""selected> PILIH PROGRAM STUDI </option>
+            <option value="1">1. Teknik Mesin</option>
+            <option value="2" >2. Manajemen Informatika</option>
+            <option value="3">3. Teknik Sipil</option>
+            <option value="4">4. Teknik Komputer</option>
+            <option value="5">5. Teknologi Rekayasa Perangkat Lunak</option>
+            <option value="6">6. Teknologi Rekayasa Multimedia Grafis</option>
+        </select><br><br>
+        Tempat Lahir :<br>
+        <input type="text" name="tempat_lahir" placeholder="tempat lahir"><br><br>
+        Tanggal Lahir :<br>
+        <input type="date" name="tanggal_lahir"><br><br>
+
+        Gambar :<br>
+        <input type="file" name="gambar"><br><br>
+
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset"><br><br>
+    </form>
+</body>
+</html>
